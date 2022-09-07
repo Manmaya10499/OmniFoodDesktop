@@ -1,0 +1,570 @@
+/* ================================================ */
+/* ==============HEADER SECTION===================== */
+/* ================================================ */
+.header {
+  background-color: #fdf2e9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+.logo {
+  color: #333;
+  font-size: 4.4rem;
+  font-style: italic;
+}
+.logo-sec strong .logo::first-letter {
+  color: #cf711f;
+}
+.main-nav-list {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+  font-size: 1.8rem;
+  list-style: none;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  color: #333;
+  font-weight: 700;
+  text-decoration: none;
+  /* transition needs to be defined on the original state */
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+/* ================================================ */
+/* ==============HERO SECTION===================== */
+/* ================================================ */
+
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9.6rem;
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+  margin-bottom: 3.2rem;
+}
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 4.8rem;
+}
+
+img {
+  width: 100%;
+}
+
+.delivered-meals {
+  margin-top: 8.6rem;
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+.customer-imgs {
+  display: flex;
+  /* we can't apply gap to some -ve values and expect the contents to overlap */
+
+  /* gap: -2rem; */
+}
+.customer-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+.customer-imgs img:last-child {
+  margin-right: 0;
+}
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
+}
+/* ===============================================================*/
+/* =========================== FEATURED IN SECTION ==============*/
+/* ===============================================================*/
+
+.section-featured-in {
+  padding: 4.8rem 0 3.2rem 0;
+}
+.featured-in-heading {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.75;
+  margin-bottom: 2.4rem;
+  text-align: center;
+  /* opacity: 20%; */
+  color: #888;
+}
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+.logos img {
+  height: 4rem;
+  width: 18.6rem;
+  filter: brightness(0%);
+  opacity: 50%;
+}
+
+/* ===============================================================*/
+/* =========================== HOW IT WORKS SECTION ==============*/
+/* ===============================================================*/
+.section-how {
+  /* background-color: orangered; */
+  padding: 9.6rem 0;
+}
+.step-img-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-img-box::after,
+.step-img-box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.step-img-box::before {
+  width: 60%;
+  /* IMP**  IF HEIGHT DIDN'T APPLY, WE CAN SET PADDING BOTTOM SAME AS THE WIDTH TO MAKE IT A SQUARE SHAPE  */
+  padding-bottom: 60%;
+  /* z-index: element with higher z-index value will appear first/on top */
+  z-index: -2;
+  background-color: #fdf2e9;
+}
+.step-img-box::after {
+  width: 45%;
+  /* IMP**  IF HEIGHT DIDN'T APPLY, WE CAN SET PADDING BOTTOM SAME AS THE WIDTH TO MAKE IT A SQUARE SHAPE  */
+  padding-bottom: 45%;
+  /* z-index: element with higher z-index value will appear first/on top */
+  z-index: -1;
+
+  background-color: #fae5de;
+}
+.img-size {
+  width: 30%;
+}
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 700;
+  color: #eee;
+  margin-bottom: 1.2rem;
+}
+.step-description {
+  font-size: 2rem;
+  line-height: 1.8;
+}
+/* ===============================================================*/
+/* =========================== MEALS SECTION =====================*/
+/* ===============================================================*/
+
+.meal-heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 3.2rem;
+}
+.meal {
+  box-shadow: 0 2.4px 4.8px rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.meal:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2px 6.4px rgba(0, 0, 0, 0.1);
+}
+
+.meal-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+.meal-tags {
+  padding-bottom: 1.2rem;
+  display: flex;
+  gap: 0.8rem;
+}
+.tag {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 100px;
+}
+.tag-vegeterian {
+  background-color: #51cf66;
+}
+.tag-vegan {
+  background-color: #94d82d;
+}
+.tag-paleo {
+  background-color: #ffec99;
+}
+.meal-attributes {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+}
+.meal-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: orange;
+}
+.meal img {
+  width: 100%;
+}
+.list {
+  list-style: none;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.diet-list {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.list-icon {
+  height: 3rem;
+  width: 3rem;
+  color: orange;
+}
+div.all-recipies {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+/*================================================ */
+/* ==============TRSTIMONIALS SECTION============== */
+/* ================================================ */
+
+.section-testimonials {
+  background-color: #fdf2e9;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+.testimonials-container {
+  padding: 9.6rem;
+}
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+.testimonial-image {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.6rem;
+}
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+  margin-bottom: 1.6rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+.gallery-img {
+  overflow: hidden;
+}
+.gallery-img img {
+  width: 100%;
+  transition: all 0.4s;
+}
+.gallery-img img:hover {
+  transform: scale(1.1);
+}
+
+/*=======================================================*/
+/* ==============PRICE + FEATURES SECTION================*/
+/* ===================================================== */
+.price-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+.price-plan {
+  border-radius: 11px;
+  width: 75%;
+}
+.pricing-plan-starter {
+  justify-self: end;
+  border: 2px solid #fdf2e9;
+  /* less padding bec of the 2px border that is applied */
+  padding: 4.6rem;
+}
+.pricing-plan-complete {
+  background-color: #fdf2e9;
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden;
+}
+.pricing-plan-complete::after {
+  content: "best value";
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #ffd43b;
+  color: #333;
+  font-size: 1.4rem;
+  position: absolute;
+  padding: 0.8rem 8rem;
+  top: 6%;
+  right: -18%;
+  transform: rotate(45deg);
+}
+
+.plan-name {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.75;
+  color: #e67e22;
+  margin-bottom: 3.2rem;
+  text-transform: uppercase;
+}
+.plan-price {
+  font-size: 5.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.8rem;
+}
+.plan-price span {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.plan-details {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #333;
+}
+
+/* text-align:center -- will also make the content center inside the container(not just text) */
+.plan-sign-up {
+  text-align: center;
+  margin-top: 4.8rem;
+}
+
+.feature-icon {
+  color: #cf711f;
+  height: 3.2rem;
+  width: 3.2rem;
+  background-color: #fae5de;
+  padding: 1.6rem;
+  border-radius: 50%;
+  margin-bottom: 3.2rem;
+}
+.feature-heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/*=======================================================*/
+/* ==============CTA SECTION=============================*/
+/* ===================================================== */
+.section-cta {
+  padding: 11.2rem 0 12.8rem 0;
+}
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.015);
+  border-radius: 11px;
+  /* background-color: #cf711f; */
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  overflow: hidden;
+}
+.cta-text-box {
+  color: #45260a;
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+.cta .heading-secondary {
+  color: #45260a;
+  margin-bottom: 3.2rem;
+}
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 150, 76, 0.35),
+      rgba(230, 125, 34, 0.329)
+    ),
+    url(eating.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2.4rem;
+  column-gap: 3.2rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+.cta-form input,
+.cta-form select {
+  font-size: 1.8rem;
+  padding: 1.2rem;
+  width: 100%;
+  font-family: inherit;
+  color: inherit;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+/* overwritting for the form(as diff background color) */
+.cta-form *:focus {
+  outline: none;
+  box-shadow: 0 0 0 8px rgba(250, 229, 222, 0.5);
+}
+
+/*=======================================================*/
+/* ==============FOOTER SECTION==========================*/
+/* ===================================================== */
+.grid-footer-cols {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #ddd;
+}
+
+.social-links {
+  margin-top: 3.2rem;
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.logo-sec {
+  display: flex;
+  flex-direction: column;
+}
+.copyright {
+  color: #767676;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-top: auto;
+}
+.footer-heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+  color: #555;
+}
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.footer-link:link,
+.footer-link:visited {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #767676;
+  transition: all 0.3s;
+}
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.contacts p {
+  margin-bottom: 2.4rem;
+}
